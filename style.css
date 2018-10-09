@@ -2,16 +2,21 @@ body{
   background-color: #F2F2F2;
 }
 
+@media only screen and (max-width: 768px){
+  body{
+    width: 100%
+  }
+}
 h1{
-font-size: 41px;
-margin-bottom: 7px;
-letter-spacing: 2px;
+  font-size: 41px;
+  margin-bottom: 7px;
+  letter-spacing: 2px;
 }
 
 h2{
-font-size: 25px;
-margin-top: 1px;
-color: #504F4F;
+  font-size: 25px;
+  margin-top: 1px;
+  color: #504F4F;
 }
 
 p{
@@ -19,6 +24,33 @@ p{
   font-style: italic;
   margin-bottom: 35px;
   color: #898686;
+}
+
+li,i{
+  display: inline-block;
+  padding: 10px;
+  margin-top: 8px;
+  list-style: none;
+  font-family: roboto;
+  font-size: 15px;
+  color:#B5B5B5;
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/*********** différents blocs principaux *********/
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 90px;
+  background-color: black;
+  font-size: 20px;
 }
 
 .bloc1{
@@ -36,7 +68,9 @@ p{
 }
 
 .bloc2{
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   height: 200px;
   width: 1150px;
   border-radius: 3px;
@@ -78,16 +112,7 @@ p{
   background-color: #FBFBFB;
 }
 
-.menu{
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 90px;
-  background-color: black;
-  font-size: 20px;
-}
-
+/********************************************/
 
 #pp1{
   width:190px;
@@ -104,23 +129,94 @@ p{
 }
 
 #bouton:hover {
-color: white;
-background-color: #00B9FF;
+  color: white;
+  background-color: #00B9FF;
 }
 
-li,i{
-  display: inline-block;
-  padding: 10px;
-  margin-top: 8px;
-  list-style: none;
-  font-family: roboto;
-  font-size: 15px;
-  color: #D1D1D1;
+/******* bloc2 RS ********/
+.blocRS{
+  height: 180px;
+  width: 300px;
 }
+
+#RS{
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+#twit:hover{
+  color: #00B9FF;
+}
+
+#insta:hover{
+  color: #FE10EF;
+}
+
+#face:hover{
+  color: #0002D3;
+}
+
+#link:hover{
+  color: #0680E3;
+}
+
+#link{
+  margin-left: 23px;
+}
+
+/*************************************/
+
+/******** taille des fleches *********/
+
+.blocanimation{
+display: flex;
+flex-direction: row;
+}
+
+#fleche1,#fleche2,#fleche3,#fleche4,#fleche5 {
+  transform: rotate(180deg);
+  margin-left: 30px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+#fleche1{
+  height: 170px;
+  width: 170px;
+}
+
+#fleche2{
+  height: 145px;
+  width: 145px;
+  margin-top: 35px;
+}
+
+#fleche3{
+  height: 110px;
+  width: 110px;
+  margin-top: 50px;
+}
+
+#fleche4{
+  height: 90px;
+  width: 90px;
+  margin-top: 60px;
+}
+
+#fleche5{
+  margin-top: -10px;
+  height: 65px;
+  width: 65px;
+  margin-top: 70px;
+}
+
+/*********************************************/
+
 
 #vie {
   letter-spacing: 0.5px;
 }
+
 
 .hidden{
   overflow: hidden;
@@ -132,18 +228,6 @@ li,i{
   margin-top: 10px;
 }
 
-#twit:hover{
-  color: #00B9FF;
-}
-#insta:hover{
-  color: #FE10EF;
-}
-#face:hover{
-  color: #0002D3;
-}
-#link:hover{
-  color: #0680E3;
-}
 
 #maps:hover{
   color: #F7BC05;
@@ -201,9 +285,4 @@ width: 15px;
 color:white;
 transition-duration: 2s;
 transform: translateX(-22px);
-}
-
-img:hover{
-  transform: scale(1.1);
-  transition: 0.5s;
 }
